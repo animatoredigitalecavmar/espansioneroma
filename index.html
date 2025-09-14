@@ -1,153 +1,182 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="it">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000; min-height: 14.0px}
-    span.s1 {font-kerning: none}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Espansione di Roma</title>
+  <style>
+    :root{--bg:#f4f4f4;--card:#fff;--accent:#333;--muted:#666}
+    *{box-sizing:border-box}
+    body{
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      margin:0; background:var(--bg); color:#111; -webkit-font-smoothing:antialiased;
+    }
+    header{background:var(--accent); color:#fff; padding:1rem 1.25rem}
+    header h1{margin:0;font-size:1.4rem}
+    .container{max-width:980px;margin:18px auto;padding:0 16px}
+    .menu{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:14px}
+    .menu button{padding:12px 20px;border-radius:8px;border:0;cursor:pointer;font-weight:700;color:#fff}
+    .btn-italia{background:#0074D9}
+    .btn-prima{background:#FF4136}
+    .btn-seconda{background:#2ECC40}
+    .btn-grecia{background:#B10DC9}
+    .menu button:focus{outline:3px solid rgba(0,0,0,0.12)}
+
+    .card{background:var(--card);padding:20px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.08);text-align:left}
+    .content{display:none}
+    .content.show{display:block}
+    h2{margin-top:0}
+    p{line-height:1.5;margin:0.6rem 0}
+    strong{font-weight:800;color:#000}
+
+    footer{max-width:980px;margin:18px auto;text-align:center;color:var(--muted);font-size:0.9rem}
+    .debug{font-family:monospace;font-size:0.85rem;color:#900}
+
+    /* responsive */
+    @media(min-width:720px){.menu{justify-content:flex-start}}
   </style>
 </head>
 <body>
-<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
-<p class="p1"><span class="s1">&lt;html lang="it"&gt;</span></p>
-<p class="p1"><span class="s1">&lt;head&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;title&gt;Espansione di Roma&lt;/title&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;style&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>body {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-family: Arial, sans-serif;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin: 0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: #f4f4f4;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>text-align: center;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>header {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: #333;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: white;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 1rem;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.menu {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin: 20px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.menu button {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin: 10px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 15px 25px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border: none;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: 8px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 16px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-weight: bold;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>cursor: pointer;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: white;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>transition: transform 0.2s;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.menu button:hover {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>transform: scale(1.05);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.btn-italia { background: #0074D9; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.btn-prima { background: #FF4136; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.btn-seconda { background: #2ECC40; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.btn-grecia { background: #B10DC9; }</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.content {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: white;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin: 20px auto;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 20px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>max-width: 800px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: 10px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>box-shadow: 0 4px 8px rgba(0,0,0,0.1);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>text-align: left;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.hidden {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>display: none;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>strong {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #c00;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
-<p class="p1"><span class="s1">&lt;body&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;header&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h1&gt;L'espansione di Roma&lt;/h1&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/header&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="menu"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;button class="btn-italia" onclick="showContent('italia')"&gt;Espansione in Italia&lt;/button&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;button class="btn-prima" onclick="showContent('prima')"&gt;Prima Guerra Punica&lt;/button&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;button class="btn-seconda" onclick="showContent('seconda')"&gt;Seconda Guerra Punica&lt;/button&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;button class="btn-grecia" onclick="showContent('grecia')"&gt;Conquista di Grecia ed Egitto&lt;/button&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div id="italia" class="content hidden"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h2&gt;Espansione in Italia&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>Tra il &lt;strong&gt;V e il III secolo a.C.&lt;/strong&gt;, Roma intraprese una lunga serie di guerre per consolidare il suo controllo sulla penisola italiana. Dopo aver imposto la propria supremazia sui &lt;strong&gt;Latini&lt;/strong&gt; con la vittoria del &lt;strong&gt;493 a.C.&lt;/strong&gt; (Foedus Cassianum), Roma affrontò gli &lt;strong&gt;Etruschi&lt;/strong&gt;, sconfiggendoli progressivamente e indebolendo le loro città.</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>La fase decisiva furono le &lt;strong&gt;Guerre sannitiche&lt;/strong&gt; (343-290 a.C.), tre conflitti complessi che opposero Roma ai &lt;strong&gt;Sanniti&lt;/strong&gt;, popolo fiero e guerriero dell’Appennino. Dopo alterne vicende (memorabile la sconfitta romana alle &lt;strong&gt;Forche Caudine&lt;/strong&gt;, 321 a.C.), Roma riuscì a prevalere, assicurandosi il controllo del centro-sud.</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>Nel sud Italia, Roma si scontrò con le città greche (Magna Grecia). Il re dell’Epiro &lt;strong&gt;Pirro&lt;/strong&gt; intervenne in aiuto dei Greci, infliggendo inizialmente gravi perdite ai Romani (battaglia di Eraclea, 280 a.C.), ma fu sconfitto definitivamente a &lt;strong&gt;Benevento&lt;/strong&gt; nel &lt;strong&gt;275 a.C.&lt;/strong&gt;. Da quel momento, Roma dominò l’intera penisola.</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>Le città vinte non furono distrutte, ma inserite in un complesso sistema di &lt;strong&gt;alleanze&lt;/strong&gt;, che garantiva a Roma truppe e stabilità: una strategia politica che rese solida l’espansione.</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div id="prima" class="content hidden"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h2&gt;Prima Guerra Punica (264-241 a.C.)&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>La Prima Guerra Punica scoppiò per il controllo della &lt;strong&gt;Sicilia&lt;/strong&gt;, punto strategico nel Mediterraneo. Fino ad allora Roma era stata una potenza terrestre, mentre &lt;strong&gt;Cartagine&lt;/strong&gt; dominava i mari con una flotta imponente. Roma, comprendendo l’importanza del mare, costruì una grande flotta da guerra.</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>Le prime battaglie furono difficili, ma Roma introdusse il &lt;strong&gt;corvo&lt;/strong&gt;, un ponte mobile che permetteva ai soldati di combattere come in battaglie terrestri anche in mare. Con questa innovazione vinse a &lt;strong&gt;Milazzo&lt;/strong&gt; (260 a.C.). Dopo alterne vicende, la vittoria definitiva avvenne alle &lt;strong&gt;Isole Egadi&lt;/strong&gt; (241 a.C.), grazie al comandante &lt;strong&gt;Gaio Lutazio Catulo&lt;/strong&gt;.</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>La pace costrinse Cartagine a cedere la Sicilia, che divenne la &lt;strong&gt;prima provincia romana&lt;/strong&gt;. Fu l’inizio dell’espansione romana nel Mediterraneo.</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div id="seconda" class="content hidden"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h2&gt;Seconda Guerra Punica (218-202 a.C.)&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>La Seconda Guerra Punica è considerata uno dei più drammatici conflitti dell’antichità. Il protagonista fu &lt;strong&gt;Annibale Barca&lt;/strong&gt;, geniale generale cartaginese, che decise di colpire Roma direttamente sul suo territorio. Con un’impresa leggendaria, attraversò le &lt;strong&gt;Alpi&lt;/strong&gt; con elefanti e truppe, entrando in Italia.</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>Annibale inflisse ai Romani terribili sconfitte: al &lt;strong&gt;Trebia&lt;/strong&gt; (218 a.C.), al &lt;strong&gt;Lago Trasimeno&lt;/strong&gt; (217 a.C.) e soprattutto a &lt;strong&gt;Canne&lt;/strong&gt; (216 a.C.), dove decine di migliaia di legionari romani furono annientati. Nonostante ciò, Roma resistette, rifiutando di arrendersi e ricorrendo a una strategia di logoramento (detta &lt;strong&gt;fabiana&lt;/strong&gt;, da Quinto Fabio Massimo).</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>Nel frattempo, Roma portò la guerra in Spagna e in Africa. Il generale &lt;strong&gt;Publio Cornelio Scipione&lt;/strong&gt;, detto poi &lt;strong&gt;l’Africano&lt;/strong&gt;, sconfisse i cartaginesi a &lt;strong&gt;Zama&lt;/strong&gt; nel &lt;strong&gt;202 a.C.&lt;/strong&gt;, ponendo fine alla guerra. Cartagine dovette rinunciare all’espansione, pagare enormi indennità e consegnare la flotta.</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>Roma uscì dalla guerra come potenza dominante del Mediterraneo occidentale.</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div id="grecia" class="content hidden"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h2&gt;Conquista di Grecia ed Egitto&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>Dopo aver sconfitto Cartagine, Roma volse lo sguardo a est. Nel &lt;strong&gt;II secolo a.C.&lt;/strong&gt; iniziò l’espansione in Grecia e nel Mediterraneo orientale. Nel &lt;strong&gt;168 a.C.&lt;/strong&gt;, a &lt;strong&gt;Pidna&lt;/strong&gt;, l’esercito romano guidato da &lt;strong&gt;Lucio Emilio Paolo&lt;/strong&gt; sconfisse il re macedone &lt;strong&gt;Perseo&lt;/strong&gt;. La Macedonia divenne provincia romana nel &lt;strong&gt;146 a.C.&lt;/strong&gt;, anno in cui fu anche distrutta &lt;strong&gt;Corinto&lt;/strong&gt;, simbolo della fine dell’indipendenza greca.</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>La penetrazione romana proseguì in Asia Minore ed Egitto. Nel &lt;strong&gt;I secolo a.C.&lt;/strong&gt;, l’Egitto dei &lt;strong&gt;Tolemaici&lt;/strong&gt; fu travolto dalle lotte dinastiche. La celebre regina &lt;strong&gt;Cleopatra VII&lt;/strong&gt; tentò di opporsi alle mire romane, alleandosi con &lt;strong&gt;Giulio Cesare&lt;/strong&gt; prima e con &lt;strong&gt;Marco Antonio&lt;/strong&gt; poi.</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>Dopo la vittoria di &lt;strong&gt;Ottaviano&lt;/strong&gt; ad &lt;strong&gt;Azio&lt;/strong&gt; (31 a.C.), Cleopatra e Antonio si tolsero la vita. Nel &lt;strong&gt;30 a.C.&lt;/strong&gt;, l’Egitto divenne provincia romana. Con questa conquista, Roma dominava ormai l’intero Mediterraneo, il cosiddetto &lt;strong&gt;Mare Nostrum&lt;/strong&gt;.</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;script&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>function showContent(id) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>document.querySelectorAll('.content').forEach(div =&gt; div.classList.add('hidden'));</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>document.getElementById(id).classList.remove('hidden');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+  <header>
+    <h1>Espansione di Roma — Webapp didattica</h1>
+  </header>
+
+  <div class="container">
+    <div class="menu" role="tablist" aria-label="Sezioni">
+      <button class="btn-italia" data-target="italia">Espansione in Italia</button>
+      <button class="btn-prima" data-target="prima">Prima Guerra Punica</button>
+      <button class="btn-seconda" data-target="seconda">Seconda Guerra Punica</button>
+      <button class="btn-grecia" data-target="grecia">Conquista di Grecia ed Egitto</button>
+    </div>
+
+    <div class="card">
+
+      <section id="italia" class="content" role="region" aria-labelledby="tit-italia">
+        <h2 id="tit-italia">Espansione in Italia</h2>
+        <p>
+          Dalla fine del <strong>V sec. a.C.</strong> Roma passò da comunità urbana a potenza regionale. La conquista della penisola non fu immediata né uniforme: fu il risultato di decenni di guerre, alleanze e assorbimento politico.
+        </p>
+        <p>
+          Fasi principali:
+        </p>
+        <p>
+          • <strong>Latini e prime alleanze</strong>: dopo il 493 a.C. Roma forma relazioni con le città latine, consolidando un primato politico e militare nel Lazio.
+        </p>
+        <p>
+          • <strong>Guerre contro gli Etruschi</strong>: progressivo indebolimento delle città etrusche, che fino ad allora dominavano il centro-nord.
+        </p>
+        <p>
+          • <strong>Guerre sannitiche (343–290 a.C.)</strong>: tre campagne che architettano il controllo dell’Appennino centrale. Eventi chiave: la disfatta romana alle <strong>Forche Caudine</strong> (321 a.C.) e la successiva ripresa.
+        </p>
+        <p>
+          • <strong>Conflitti con la Magna Grecia e la caduta di Pirro</strong>: l’intervento di <strong>Pirro d’Epiro</strong> (280–275 a.C.) mostra la resistenza delle città greche del Sud, ma la vittoria romana a <strong>Benevento</strong> (275 a.C.) segna la sottomissione definitiva.
+        </p>
+        <p>
+          Il metodo romano fu pragmatico: integrazione politica (cittadinanza parziale, alleanze), colonizzazione militare e infrastrutture. Questo sistema permise a Roma di disporre di risorse umane e militari per rivolgere poi lo sguardo al Mediterraneo.
+        </p>
+      </section>
+
+      <section id="prima" class="content" role="region" aria-labelledby="tit-prima">
+        <h2 id="tit-prima">Prima Guerra Punica (264–241 a.C.)</h2>
+        <p>
+          La Prima Guerra Punica scoppia per il controllo della <strong>Sicilia</strong>, cruciale per il commercio e il controllo marittimo nel Mediterraneo occidentale. Cartagine è la potenza marittima consolidata; Roma è ancora principalmente una potenza terrestre.
+        </p>
+        <p>
+          Strategie e svolgimenti:
+        </p>
+        <p>
+          • Roma costruisce una flotta da zero e introduce il <strong>corvo</strong>, un dispositivo che permette agli uomini di bordo di trasformare gli scontri navali in combattimenti corpo a corpo.
+        </p>
+        <p>
+          • Battaglie importanti: <strong>Milazzo</strong> (260 a.C., vittoria navale romana) e la battaglia delle <strong>Isole Egadi</strong> (241 a.C.), che decide la guerra.
+        </p>
+        <p>
+          Conseguenze:
+        </p>
+        <p>
+          • Cartagine perde la Sicilia: la Sicilia diventa la <strong>prima provincia romana</strong>.
+        </p>
+        <p>
+          • Roma impara a dominare il mare e acquisisce esperienza navale, elemento determinante per il futuro scontro con Cartagine.
+        </p>
+      </section>
+
+      <section id="seconda" class="content" role="region" aria-labelledby="tit-seconda">
+        <h2 id="tit-seconda">Seconda Guerra Punica (218–202 a.C.)</h2>
+        <p>
+          Il fatto scatenante è la lotta per il controllo della penisola iberica e delle rotte commerciali; l’uomo chiave lato cartaginese è <strong>Annibale Barca</strong>.
+        </p>
+        <p>
+          Annibale compie l’impresa strategica di attraversare le <strong>Alpi</strong> (con uomini ed elefanti) e invade l’Italia settentrionale. Ottiene grandi vittorie: <strong>Trebia</strong> (218 a.C.), <strong>Lago Trasimeno</strong> (217 a.C.) e soprattutto <strong>Canne</strong> (216 a.C.), una delle peggiori disfatte mai subite da Roma.
+        </p>
+        <p>
+          Nonostante le sconfitte, Roma non cede: mette in atto la strategia di logoramento (ispirata a Quinto <strong>Fabio Massimo</strong>) e porta la guerra in Spagna e infine in Africa.
+        </p>
+        <p>
+          <strong>Publio Cornelio Scipione</strong> (lo <em>Africano</em>) si impone come comandante vincente: sconfigge le forze cartaginesi in Spagna e manda allo scontro decisivo Annibale a <strong>Zama</strong> (202 a.C.), dove Roma ottiene la vittoria.
+        </p>
+        <p>
+          Conseguenze: Cartagine perde la supremazia, cede territori e flotta, paga pesanti indennità; Roma diventa la potenza dominante nell’ovest del Mediterraneo.
+        </p>
+      </section>
+
+      <section id="grecia" class="content" role="region" aria-labelledby="tit-grecia">
+        <h2 id="tit-grecia">Conquista di Grecia ed Egitto</h2>
+        <p>
+          Nel <strong>II secolo a.C.</strong> Roma interviene nel teatro orientale, inizialmente come arbitro delle guerre ellenistiche, poi come dominatore diretto.
+        </p>
+        <p>
+          • Nel 168 a.C. la battaglia di <strong>Pidna</strong> vede la sconfitta del re macedone <strong>Perseo</strong> ad opera di <strong>Lucio Emilio Paolo</strong>. La Macedonia viene organizzata come provincia romana (146 a.C.).
+        </p>
+        <p>
+          • Nel 146 a.C. la distruzione di <strong>Corinto</strong> segna simbolicamente la fine dell’indipendenza politica delle città greche.
+        </p>
+        <p>
+          L’Egitto rimane per un periodo un regno cliente, ma le lotte interne dei <strong>Ptolemei</strong> e gli intrecci con i protagonisti romani (Giulio <strong>Cesare</strong>, <strong>Marco Antonio</strong>) portano all’intervento diretto di Roma. La vittoria di <strong>Ottaviano</strong> su Marco Antonio e Cleopatra ad <strong>Azio</strong> (31 a.C.) e la loro morte (30 a.C.) rendono l’Egitto una provincia personale di Roma.
+        </p>
+        <p>
+          Con queste acquisizioni Roma raggiunge il suo apice territoriale nel Mediterraneo: il cosiddetto <strong>Mare Nostrum</strong>.</p>
+      </section>
+
+      <noscript>
+        <p class="debug">Questa pagina richiede JavaScript per funzionare correttamente. Abilita JavaScript nel browser o leggi le sezioni direttamente nel codice sorgente.</p>
+      </noscript>
+
+    </div>
+
+    <div style="margin-top:12px;text-align:center">
+      <small>Nota: ho predisposto la sezione <em>"Espansione in Italia"</em> come contenuto mostrato all'avvio.</small>
+    </div>
+
+  </div>
+
+  <footer>
+    <div>Se la webapp continua a non funzionare: salva il file come <strong>index.html</strong>, aprilo con un browser moderno e apri la console (F12) per eventuali errori.</div>
+  </footer>
+
+  <script>
+    // script robusto: aggiunge event listeners e mostra la sezione di default
+    (function(){
+      function showContent(id){
+        document.querySelectorAll('.content').forEach(c=>c.classList.remove('show'));
+        var el = document.getElementById(id);
+        if(!el){console.error('showContent: elemento non trovato', id);return}
+        el.classList.add('show');
+      }
+
+      document.addEventListener('DOMContentLoaded', function(){
+        document.querySelectorAll('.menu button[data-target]').forEach(function(btn){
+          btn.type = 'button';
+          btn.addEventListener('click', function(){ showContent(this.dataset.target) });
+          btn.addEventListener('keydown', function(e){ if(e.key==='Enter' || e.key===' '){ e.preventDefault(); this.click(); } });
+        });
+        // mostra la prima sezione di default
+        showContent('italia');
+      });
+
+      // espone funzione se qualcuno richiama da console
+      window._romaShow = showContent;
+    })();
+  </script>
 </body>
 </html>
